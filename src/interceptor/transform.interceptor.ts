@@ -32,9 +32,9 @@ export class TransformInterceptor<T>
     return next.handle().pipe(
       map((data) => {
         // Thay đổi status code cho POST requests từ 201 sang 200
-        if (request.method === 'POST') {
-          response.status(200);
-        }
+        // if (request.method === 'POST') {
+        //   response.status(200);
+        // }
 
         return {
           statusCode: response.statusCode,
